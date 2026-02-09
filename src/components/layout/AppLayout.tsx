@@ -41,8 +41,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         { label: "Objednávky", href: "#", icon: Package },
         { label: "Zákazníci", href: "#", icon: Users },
         { label: "Audit Log", href: "/dashboard/audit", icon: FileText },
-        { label: "Nastavenia", href: "/settings", icon: Settings },
+        { label: "Nastavenia", href: "/dashboard/settings", icon: Settings },
     ];
+
 
     const isActive = (href: string) => {
         if (href === "/dashboard" && pathname === "/dashboard") return true;

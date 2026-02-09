@@ -1,4 +1,6 @@
+export const dynamic = "force-dynamic";
 "use client";
+
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { GeneralSettings } from "./components/general-settings";
