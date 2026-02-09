@@ -38,8 +38,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     const navItems = [
         { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
         { label: "Inbox", href: "/dashboard/inbox", icon: Mail, badge: "6" },
-        { label: "Objednávky", href: "#", icon: Package },
-        { label: "Zákazníci", href: "#", icon: Users },
+        { label: "Objednávky", href: "/dashboard/orders", icon: Package },
+        { label: "Zákazníci", href: "/dashboard/customers", icon: Users },
         { label: "Audit Log", href: "/dashboard/audit", icon: FileText },
         { label: "Nastavenia", href: "/dashboard/settings", icon: Settings },
     ];
@@ -47,7 +47,8 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
 
     const isActive = (href: string) => {
         if (href === "/dashboard" && pathname === "/dashboard") return true;
-        if (href !== "/dashboard" && pathname.startsWith(href)) return true;
+        if (href !== "/dashboard" && pathname === href) return true;
+        if (href !== "/dashboard" && href !== "/dashboard/settings" && pathname.startsWith(href)) return true;
         return false;
     };
 
