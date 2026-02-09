@@ -1,8 +1,9 @@
-export const dynamic = "force-dynamic";
 "use client";
 
+export const dynamic = "force-dynamic";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 import { GeneralSettings } from "./components/general-settings";
 import { CRMSettings } from "./components/crm-settings";
 import { AISettings } from "./components/ai-settings";
